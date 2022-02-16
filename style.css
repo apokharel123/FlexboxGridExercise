@@ -1,0 +1,158 @@
+section:not(#three) {
+    height: 400px;
+    margin: 10px 0;
+  }
+  #one {
+    background-color: rgb(150, 150, 150);
+  }
+  #two {
+    background-color: rgb(205, 205, 205);
+  }
+  #three {
+    background-color: rgb(150, 150, 150);
+    width: 400px;
+    margin-bottom: 200px;
+  }
+  div {
+    width: 90px;
+    height: 90px;
+    border: 3px solid black;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #two div {
+    width: 400px;
+  }
+  #red {
+    background-color: red;
+  }
+  #green {
+    background-color: green;
+  }
+  #blue {
+    background-color: blue;
+  }
+  #orange {
+    background-color: orange;
+  }
+  #purple {
+    background-color: purple;
+  }
+  #brown {
+    background-color: brown;
+  }
+  p {
+    margin: 0;
+    background-color: #0C2340;
+    border: 2px solid #AE9142;
+    font-size: 30px;
+    color: #C99700;
+    text-align: center;
+  }
+  p:nth-of-type(even) {
+    color: #00843D;
+  }
+  
+  /* START BELOW THIS LINE */
+  #one {
+    display: flex; justify-content: flex-end;
+   }
+   #one{
+     flex-direction: column; 
+   }
+#one{
+   align-items: center;
+}
+#two {
+  display: flex; align-items: center ;
+
+/*
+disply:flex will automatically put in in a row
+#purple {  
+   margin:auto
+}  moves middle tem to the center
+#brown { 
+ margin-left: auto;
+}  moves  last  items to the bottom righ
+you can use gap to create the gap between the items / also you can use pace evenly*/
+
+   justify-content: space-between; flex-wrap: wrap;
+}
+/* 9 */
+#three {
+display: grid; grid-template-columns: repeat(4,1fr);
+/* gid template colums : repeat (4,1fr)/(4,25%)/ (4,100px)/ 4 means the items in a one row
+1fr means one part of available space */
+grid-auto-rows: 100px; /* sets the height of rows*/
+}
+
+/*Bonus*/
+
+/*1*/
+#one {
+  flex-direction: column-reverse;
+
+}
+#brown {
+  order: 1;
+  align-self: flex-start;
+  /* can also use order:-1*/
+
+}
+#orange {
+  order: 2;
+}
+
+#purple {
+  order: 3;
+  align-self: flex-end;
+  }
+  #p-one {
+     grid-column: 1/3;
+     /* or 
+     grid-column-start: 1;
+     grid-column-end: 3;*/
+  }
+  #p-two {
+    grid-column: 3/5;
+  }
+  #p-three {
+    grid-row: 2/4;
+    /* or
+    grid-row-start: 2
+    gris-row-end:4*/
+  }
+  #p-four {
+    grid-column: 2/4;
+    grid-row:2/4 ;
+    /*or
+     grid-column-start:2
+     grid-column-end:4
+    */
+
+  }
+  #p-five {
+    grid-row: 2/5;
+    /*
+    0r
+    grid-rwo-start: 2
+    gris-row-end:5*/
+  }
+  #p-six {
+    grid-column: 1/4;
+    
+  }
+#p-eight {
+grid-column:2/5 ;
+}
+
+ /* OR
+ #three {
+   grid-template-areas: "1 1 2 2" "3 4 4 5" "3 4 4 5"
+   "6 6 6 5" "7 8 8 8";
+ } */
